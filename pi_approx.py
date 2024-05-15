@@ -5,7 +5,7 @@ from math import sqrt
 def main():
     line = [[], []]
 
-    iters = 1000000
+    iters = 100000
     for i in range(iters + 1):
         num = i / iters
         line[0].append(num)
@@ -36,4 +36,16 @@ def main():
     plt.legend(shadow = True, markerscale = 50, loc = "upper right")
     plt.show()
     
+def approx():
+    n = 0
+    b = 0
+    while True:
+        x, y = random.uniform(0, 1), random.uniform(0, 1)
+        if y < sqrt(1 - x ** 2):
+            b += 1   
+        n += 1
+        if n % 1000000 == 0:
+            print(f"Pi ≈ {4 * b / n}")
+            
 main()
+#approx()

@@ -5,7 +5,7 @@ from math import sqrt
 def main():
     line = [[], []]
 
-    iters = 100000000
+    iters = 1000000
     for i in range(iters + 1):
         num = i / iters
         line[0].append(num)
